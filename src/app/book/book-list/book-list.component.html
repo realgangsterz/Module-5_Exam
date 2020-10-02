@@ -15,8 +15,8 @@
     <td scope="row">{{book.id}}</td>
     <td> <a [routerLink]="['/', book.id]">{{book.title}}</a></td>
     <td>{{book.author}}</td>
-    <td><button [routerLink]="'/edit/'+book.id">Edit</button></td>
-    <td><button [routerLink]="'/delete/'+book.id">Delete</button></td>
+    <td><button type="button" class="btn btn-success" [routerLink]="'/edit/'+book.id">Edit</button></td>
+    <td><button type="button" class="btn btn-danger" [routerLink]="'/delete/'+book.id">Delete</button></td>
   </tr>
   </tbody>
 </table>

@@ -1,5 +1,5 @@
 <h2>Create Book</h2>
-<button [routerLink]="''">Back to List</button>
+<button type="button" class="btn btn-primary" [routerLink]="''">Back to List</button>
 <hr>
 <form [formGroup]="postForm" (ngSubmit)="createBook()">
   <div>
@@ -32,5 +32,5 @@
   <div *ngIf="postForm.get('description').invalid && postForm.get('description').touched" style="color: red">
     Description is required and min length is 10
   </div>
-  <button type="submit">Create</button>
+  <button  type="button" class="btn btn-success" type="submit">Create</button>
 </form>

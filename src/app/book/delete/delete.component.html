@@ -1,1 +1,11 @@
-<p>delete works!</p>
+<h3>Bạn có chắc mình muốn xoá quyển sách này?</h3>
+<div *ngIf="book; else nothing1">
+  <p class="font-weight-bold">Name: </p><p>{{book.title}}</p><br>
+  <p class="font-weight-bold">Author: </p><p>{{book.author}}</p><br>
+  <p class="font-weight-bold">Description: </p><p>{{book.description}}</p><br>
+</div>
+<button class="btn btn-danger mt-2" (click)="deleteBook()">Xoá</button>
+<a class="btn btn-success mt-2 ml-2" routerLink="''">Quay lại</a>
+<ng-template #nothing1>
+  <p>Nothing to show</p>
+</ng-template>
