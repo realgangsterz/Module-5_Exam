@@ -1,0 +1,24 @@
+<!--<p>book-list works!</p>-->
+<h1>Book List</h1>
+<a [routerLink]="'/create'" >+ Add a new book</a>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Title</th>
+    <th scope="col">Author</th>
+<!--    <th scope="col">Description</th>-->
+    <th scope="col" colspan="2">Function</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of listBook" class="thead-light">
+    <td scope="row">{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+<!--    <td>{{book.description}}</td>-->
+    <td><button [routerLink]="'/edit/'+book.id">Edit</button></td>
+    <td><button [routerLink]="'/delete/'+book.id">Delete</button></td>
+  </tr>
+  </tbody>
+</table>
