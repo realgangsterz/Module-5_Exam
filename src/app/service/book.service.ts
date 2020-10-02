@@ -18,6 +18,10 @@ export class BookService {
     return this.http.get<IBook[]>(API_URL );
   }
 
+  getBookById(id): Observable<IBook>{
+    return this.http.get<IBook>(API_URL + `/${id}`);
+  }
+
   create(book): Observable<IBook> {
     return this.http.post<IBook>(API_URL, book);
   }

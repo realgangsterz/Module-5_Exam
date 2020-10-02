@@ -29,6 +29,7 @@ export class CreateComponent implements OnInit {
   createBook(): void {
     if (this.postForm.valid) {
       const {value} = this.postForm;
+      // value.id
       this.bookService.create(value)
         .subscribe(() => {
           alert('thanh cong');
